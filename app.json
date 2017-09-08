@@ -1,12 +1,39 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/crash/crash"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "danea的小钱包",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#459ae9",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/img/index.png",
+        "selectedIconPath": "pages/img/index_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "pages/img/product.png",
+        "selectedIconPath": "pages/img/product_selected.png",
+        "text": "新闻头条"
+      },
+      {
+        "pagePath": "pages/crash/crash",
+        "iconPath": "pages/img/contact.png",
+        "selectedIconPath": "pages/img/contact_selected.png",
+        "text": "联系我们"
+      }
+    ]
   }
 }

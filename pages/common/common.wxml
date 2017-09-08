@@ -2,7 +2,7 @@
 <template name="pictureItem">
    <view class="item-view">
         <text class="content">{{item.title}}</text>
-        <image src="{{item.thumbnail_pic_s02 || item.thumbnail_pic_s03}}" mode="aspectFit" bindtap="toDetail" data-url="{{item.url}}"/>
+        <image src="{{item.thumbnail_pic_s02 || item.thumbnail_pic_s03}}" mode="aspectFit" bindtap="lookPic" data-url="{{item.thumbnail_pic_s02}}"/>
         <text class="date">{{item.date}}</text>
     </view>
 </template>
@@ -12,5 +12,14 @@
     <view class="loading-view" hidden="{{hideFooter}}">
         <image src="../img/load.gif" style="height:26px;width:26px"/>
         <text style="font-size:20px">正在加载</text>
+    </view>
+</template>
+
+<!--账目笔记-->
+<template name="crashItem">
+    <view class="crash-item">
+        <div>{{item.time}}</div>
+        <div>用于{{item.msg}}，花了{{item.account}}元</div>
+        <div></div>
     </view>
 </template>

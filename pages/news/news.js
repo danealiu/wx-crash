@@ -1,4 +1,5 @@
 var app = getApp()
+
 var { request } = require('../../utils/util')
 var url = 'https://v.juhe.cn/toutiao/index'
 Page({
@@ -6,8 +7,7 @@ Page({
     page: 1,
     loadingHide: false,
     hideFooter: true,
-    picList: [],
-    picDetail: []
+    picList: []
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -49,7 +49,12 @@ Page({
     })
   },
 
-  toDetail(e) {
-    console.log(e.target.dataset.url)
+  lookPic(e) {
+    console.log(e.target.dataset.url);
+    var urls = [];
+    urls.push(e.target.dataset.url);
+    wx.previewImage({
+      urls: urls 
+    })
   }
 })

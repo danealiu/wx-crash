@@ -2,7 +2,7 @@
 <import src="../common/common.wxml"/>
 
 <scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore" lower-threshold="100">
-    <template is="pictureItem" data="{{item,preview}}" wx:for="{{picList}}" />
+    <template is="pictureItem" data="{{item,lookPic}}" wx:for="{{picList}}" />
     <template is="loadindFooter" data="{{hideFooter}}"/>
 </scroll-view>
 

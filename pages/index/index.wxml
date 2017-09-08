@@ -1,3 +1,4 @@
+<import src="../common/common.wxml"/>
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
@@ -10,4 +11,20 @@
   <view class="newslist">
     <text class="user-motto">今天是{{nowDay}}</text>
   </view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <div class="tip" wx:if="{{tip}}">{{tip}}</div>
+  <view class="section">
+    <input placeholder="请输入花费的用途" auto-focus bindinput="bindInput" name="msg"/>
+  </view>
+  <view class="section">
+    <input type="digit" placeholder="请输入花费的金额" bindinput="bindInput" name="account"/>
+  </view>
+  <button formType="submit" disabled="{{tip}}"> 添加 </button>
+  <button formType="reset"> 重置 </button>
+</form>
+  <scroll-view scroll-y bindscrolltoupper="upper" class="newslist">
+     <template is="crashItem" data="{{item}}" wx:for="{{crashList}}" />
+  </scroll-view>
+
 </view>

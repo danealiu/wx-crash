@@ -19,3 +19,37 @@
 .newslist {
   margin-top: 20px;
 }
+form {
+  width: 80%;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+input {
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  padding: 0 20px;
+}
+button {
+  line-height: 1.8rem;
+  margin: 10px 0;
+  display: inline-block;
+  width: 40%;
+}
+.crash-item {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.crash-item div {
+  text-align: center;
+  display: block;
+ }
+ .tip {
+   color: rgb(239, 120, 138);
+   background: #fff9d6;
+   padding: 3px;
+   margin-top: 10px;
+   font-size: 12px;
+ }
